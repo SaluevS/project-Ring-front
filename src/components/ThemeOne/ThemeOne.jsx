@@ -3,12 +3,13 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchThemes } from '../../features/themeSlice';
-import { addComment, fetchComments } from '../../features/commentSlice';
+import { addComment, addLike, delLike, fetchComments } from '../../features/commentSlice';
 import styles from '../ThemeOne/themeOne.module.css';
 import { useState } from 'react';
 
 const ThemeOne = () => {
     const [comm, setComm] = useState('')
+    const [like, setLike] = useState(true)
     const { id } = useParams();
     const themes = useSelector((state) => state.themeSlice.themes)
     const comments = useSelector((state) => state.commentSlice.comments)
@@ -41,6 +42,17 @@ const ThemeOne = () => {
         dispatch(addComment({ comm, id, userId }))
     }
 
+    const handleAddLike = ( userId, commId) => {
+        if (like) {
+            dispatch(addLike({ userId, commId }))
+            setLike(false)
+        }
+        if (!like) {
+            dispatch(delLike({ userId, commId }))
+            setLike(true)
+        }
+    }
+
     return (
         <div>
             {filteredThemes.map((elem) => {
@@ -53,6 +65,10 @@ const ThemeOne = () => {
                     <div>
                         {item.user.login}
                         {item.text}
+                        <div>
+                            <button className={styles.buttonLike} onClick={() => handleAddLike(userId, item._id)}>❤️</button>
+                            <div>{item.like.length}</div>
+                        </div>
                     </div>
                 )
             })}

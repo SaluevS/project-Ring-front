@@ -7,18 +7,20 @@ import Theme from './components/Theme/Theme';
 import ThemeMap from './components/ThemeMap/ThemeMap';
 import ThemeOne from './components/ThemeOne/ThemeOne';
 import Home from './components/Home/Home';
+import Header from './components/Header/Header'
 
 const App = () => {
   return (
     <>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/auth' element={<SignUp />} />
-      <Route path='/login' element={<SignIn />} />
-      <Route path='/discussions' element={<Discussions />} />
-      <Route path='/theme' element={<ThemeMap />} />
-      <Route path='/discussions/:id' element={<ThemeOne />} />
-    </Routes>
+    <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/auth' element={<SignUp />} />
+        <Route path='/login' element={<SignIn />} />
+        <Route path='/discussions' element={<Discussions />} />
+        <Route path='/theme' element={<ThemeMap />} />
+        <Route path='/discussions/:id' element={<ThemeOne />} />
+      </Routes>
     </>
   );
 };
