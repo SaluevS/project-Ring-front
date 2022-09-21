@@ -21,14 +21,14 @@ export const fetchThemes = createAsyncThunk(
 
 export const addTheme = createAsyncThunk(
     'add/theme',
-    async ({ name, text }, thunkAPI) => {
+    async ({ name, text, userId }, thunkAPI) => {
         try {
             const res = await fetch('http://localhost:3400/theme', {
                 method: 'POST',
                 headers: {
                     'Content-Type': "application/json"
                 },
-                body: JSON.stringify({ name: name, text: text })
+                body: JSON.stringify({ name: name, text: text, user: userId })
             })
 
             const theme = await res.json();

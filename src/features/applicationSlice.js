@@ -5,7 +5,7 @@ const initialState = {
     signingIn: false,
     error: null,
     token: localStorage.getItem('token'),
-    name: localStorage.getItem('name')
+    login1: localStorage.getItem('name')
 }
 
 export const authSignUp = createAsyncThunk(
@@ -42,7 +42,7 @@ export const authSignIn = createAsyncThunk(
             const token = await res.json()
 
             localStorage.setItem('token', token.token)
-            localStorage.setItem('name', token.name)
+            localStorage.setItem('name', token.login1)
 
             return token
         } catch (e) {
