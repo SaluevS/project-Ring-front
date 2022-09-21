@@ -12,7 +12,7 @@ const ThemeMap = () => {
 
     useEffect(() => {
         dispatch(fetchThemes())
-    })
+    }, [dispatch])
 
     return (
         <div className={styles.themeMap}>
