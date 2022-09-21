@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import Discussions from './components/Discussions/Discussions';
 import Theme from './components/Theme/Theme';
 import ThemeMap from './components/ThemeMap/ThemeMap';
+import ThemeOne from './components/ThemeOne/ThemeOne';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Route path='/login' element={<SignIn />} />
       <Route path='/discussions' element={<Discussions />} />
       <Route path='/theme' element={<ThemeMap />} />
+      <Route path='/discussions/:id' element={<ThemeOne />} />
     </Routes>
   );
 };

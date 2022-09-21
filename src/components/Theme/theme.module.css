@@ -24,3 +24,7 @@
     width: 100%;
     background-color: green;
 }
+
+.linkDisc {
+    text-decoration: none;
+}
