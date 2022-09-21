@@ -40,7 +40,7 @@
 .loginScreen::before {
     content: "";
     display: block;
-    width: 70px;
+    width: 20px;
     height: 4px;
     background: #4E535B;
     border-radius: 5px;
@@ -62,7 +62,6 @@ input {
 
 input:hover {
     outline-color: rgb(71, 71, 228);
-    border: none;
 }
 
 .loginForm {
@@ -72,37 +71,41 @@ input:hover {
 
 ::-webkit-input-placeholder {
     color: #71747A;
-    font-family:'Open Sans', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     text-shadow: 0 1px 0 #FFF;
-  }
+}
 
-  button {
+button {
     margin-top: 20px;
     display: block;
     width: 100%;
     line-height: 2em;
-    background: rgba(114,212,202,1);
+    background: rgba(114, 212, 202, 1);
     border-radius: 5px;
-    border:0;
+    border: 0;
     cursor: pointer;
     border-top: 1px solid #B2ECE6;
     box-shadow: 0 0 0 1px #46A294, 0 2px 2px #808389;
     color: #FFFFFF;
     font-size: 1.5em;
     text-shadow: 0 1px 2px #21756A;
-  }
+}
 
-  .btn {
+.btn {
     margin-bottom: 5%;
-  }
+}
 
 .controlGroup {
     transition: 250ms;
 }
 
-  button:hover {
+button:hover {
     background-color: rgb(56, 179, 56);
     transform: scale(1.05);
     transition: 0.5s;
-  }
+}
 
+.loginLink1 {
+    text-decoration: none;
+    color: rgb(78, 78, 232);
+}

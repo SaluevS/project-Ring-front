@@ -1,0 +1,26 @@
+.mainTheme {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    border: 1px solid silver;
+    margin-top: 1%;
+}
+
+.themeImage {
+    width: 100%;
+    height: 200px;
+}
+
+.themeImg {
+    height: 100%;
+    width: 100%;
+}
+
+.mainButtonTheme {
+    width: 350px;
+}
+
+.buttonTheme {
+    width: 100%;
+    background-color: green;
+}

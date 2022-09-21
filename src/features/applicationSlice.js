@@ -12,7 +12,7 @@ export const authSignUp = createAsyncThunk(
     'auth/signUp',
     async ({ login, password }, thunkAPI) => {
         try {
-            const res = await fetch("http://localhost:3030/user", {
+            const res = await fetch("http://localhost:3400/user", {
                 method: 'POST',
                 headers: {
                     "Content-Type": 'application/json'
@@ -32,7 +32,7 @@ export const authSignIn = createAsyncThunk(
     'auth/signIn',
     async ({ login, password }, thunkAPI) => {
         try {
-            const res = await fetch("http://localhost:3030/login", {
+            const res = await fetch("http://localhost:3400/login", {
                 method: 'POST',
                 headers: {
                     "Content-Type": 'application/json'

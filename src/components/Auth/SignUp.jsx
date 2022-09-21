@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authSignUp } from '../../features/applicationSlice';
-import styles from '../Auth/auth.module.css'
+import { Link } from 'react-router-dom';
+import styles from '../Auth/auth.module.css';
 
 const SignUp = () => {
     const [login, setLogin] = useState('')
@@ -55,7 +56,7 @@ const SignUp = () => {
                             />
                             <br />
                             <button class={styles.btn} type='submit' onClick={handleSignUp}>Зарегистрироваться</button>
-                            <a class={styles.loginLink} href="intocode.ru">У вас есть аккаунт?</a>
+                            <p class={styles.loginLink}>У вас есть аккаунт?<Link className={styles.loginLink1} to={'/login'}>  Войти</Link></p>
                         </form>
                     </div>
                 </div>
