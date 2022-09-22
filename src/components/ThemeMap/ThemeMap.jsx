@@ -18,7 +18,7 @@ const ThemeMap = () => {
         <div className={styles.themeMap}>
             {theme.map((elem) => {
                 return <Theme themes={elem} />
-            })}
+            }).reverse()}
         </div>
     );
 };

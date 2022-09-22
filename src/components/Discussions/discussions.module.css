@@ -38,3 +38,11 @@
     opacity: 0.5;
     font-family: cursive;
 }
+
+.image1 {
+    width: 50px;
+}
+
+.mainPhoto {
+    display: flex;
+}
