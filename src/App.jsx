@@ -7,7 +7,7 @@ import Header from './components/Header/Header';
 import ThemeMap from './components/ThemeMap/ThemeMap';
 import ThemeOne from './components/ThemeOne/ThemeOne';
 import Home from './components/Home/Home';
-import Header from './components/Header/Header'
+
 
 const App = () => {
   return (
