@@ -18,7 +18,6 @@ const App = () => {
       <Route path='/auth' element={<SignUp />} />
       <Route path='/login' element={<SignIn />} />
       <Route path='/discussions' element={<Discussions />} />
-      <Route path='/theme' element={<ThemeMap />} />
       <Route path='/discussions/:id' element={<ThemeOne />} />
     </Routes>
     </>

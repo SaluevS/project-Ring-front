@@ -9,7 +9,7 @@ const Home = () => {
         <source src={vid} type="video/mp4" />
       </video>
       <div className={styles.main}>
-        <Link to="/theme" className={styles.ll}>
+        <Link to="/discussions" className={styles.ll}>
           <button> Перейте к Форуму </button>
         </Link>
         <Link to="/cart" className={styles.ll}>
