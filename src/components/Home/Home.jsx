@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "../Home/Home.module.css";
-import vid from "../Home/video/8683.MP4";
+import vid from "../Home/video/2323.mp4";
 
 const Home = () => {
   return (

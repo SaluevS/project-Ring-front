@@ -75,7 +75,7 @@ input:hover {
     text-shadow: 0 1px 0 #FFF;
 }
 
-button {
+.controlGroup button {
     margin-top: 20px;
     display: block;
     width: 100%;
@@ -99,7 +99,7 @@ button {
     transition: 250ms;
 }
 
-button:hover {
+.controlGroup button:hover {
     background-color: rgb(56, 179, 56);
     transform: scale(1.05);
     transition: 0.5s;
