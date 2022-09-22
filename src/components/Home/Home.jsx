@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import styles from "../Home/Home.module.css";
 import vid from "../Home/video/2323.mp4";
+import Header from "../Header/Header"
 
 const Home = () => {
   return (
+    <>
+    <Header/>
     <div className={styles.Home}>
       <video autoPlay muted loop>
         <source src={vid} type="video/mp4" />
@@ -17,6 +20,7 @@ const Home = () => {
         </Link>
       </div>
     </div>
+    </>
   );
 };
 

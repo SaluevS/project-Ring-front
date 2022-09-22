@@ -49,7 +49,7 @@
     margin: 0 auto;
 }
 
-input {
+.controlGroup input {
     width: 260px;
     background: transparent;
     border: 0;
@@ -60,7 +60,7 @@ input {
     text-shadow: 0 1px 0 #FFF;
 }
 
-input:hover {
+.controlGroup input:hover {
     outline-color: rgb(71, 71, 228);
 }
 
