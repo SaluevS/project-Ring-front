@@ -22,14 +22,23 @@
 }
 
 .main button {
-  color: gray;
-  background-color: white;
+  color: gold;
+  background-color: rgb(109, 109, 109);
   width: 345px;
   font-size: 35px;
-  border-radius: 15px;
+  border-radius: 35px;
   padding: 0;
   font-family: "Pacifico", cursive;
   margin-top: 360px;
+  border: none;
+  transition: 0.5s;
+  text-shadow: 0;
+}
+
+.main button:hover {
+  background-color: rgb(56, 179, 56);
+  transform: scale(1.15);
+  transition: 0.5s;
 }
 
 .ll {

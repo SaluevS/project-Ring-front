@@ -7,13 +7,13 @@
 }
 
 .Header img {
-  width: 60px;
-  height: 50px;
+  width: 70px;
+  height: 60px;
 }
 
 .link {
   font-size: 35px;
-  color: white;
+  color: gold;
   font-family: "Pacifico", cursive;
   text-decoration: none;
 }
