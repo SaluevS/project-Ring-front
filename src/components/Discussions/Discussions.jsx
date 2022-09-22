@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTheme, fetchThemes } from '../../features/themeSlice';
 import styles from '../Discussions/discussions.module.css'
 import ThemeMap from '../ThemeMap/ThemeMap';
+import axios from 'axios'
 
 const Discussions = () => {
+    const [img, setImage] = useState()
+    const [avatar, setAvatar] = useState()
     const [name, setName] = useState('')
     const [text, setText] = useState('')
     const userId = useSelector((state) => state.applicationSlice.login1)
@@ -26,8 +29,26 @@ const Discussions = () => {
     }, [dispatch])
 
     const handleAdd = () => {
-        dispatch(addTheme({ name, text, userId }))
+        dispatch(addTheme({ name, text, userId, avatar }))
     }
+
+    const sendFile = useCallback(async (e) => {
+        e.preventDefault()
+        try {
+            const data = new FormData()
+            data.append('avatar', img)
+
+            await axios.post('/upload', data, {
+                headers: {
+                    'content-type': 'multipart/form-data'
+                }
+            })
+
+                .then(res => setAvatar(res.data.originalname))
+        } catch (e) {
+            console.log(e);
+        }
+    }, [img])
 
     return (
         <>
@@ -36,6 +57,10 @@ const Discussions = () => {
                     <div className={styles.inputs}>
                         <input className={styles.inputDisc} placeholder='Тема' value={name} onChange={handleName} />
                         <input className={styles.inputDisc} placeholder='Текст' value={text} onChange={handleText} />
+                        <div className={styles.mainPhoto}>
+                        <input type='file' onChange={e => setImage(e.target.files[0])} className={styles.inputPhoto}/>
+                        <button className={styles.fileButton} onClick={sendFile}>Добавить фото</button>
+                        </div> 
                     </div>
                     <button className={styles.buttonDisc} onClick={handleAdd}>Добавить</button>
                 </div>

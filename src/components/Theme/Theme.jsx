@@ -6,7 +6,7 @@ const Theme = ({ themes }) => {
     return (
         <div className={styles.mainTheme}>
             <div className={styles.themeImage}>
-                <img className={styles.themeImg} src='https://images3.alphacoders.com/855/85585.jpg' />
+                <img className={styles.themeImg} src={`http://localhost:3400/images/${themes.image}`} />
             </div>
             <div>
                 <h3>{themes.name}</h3>
