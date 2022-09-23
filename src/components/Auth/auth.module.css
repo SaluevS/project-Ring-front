@@ -1,6 +1,6 @@
 .login {
     background: rgba(200, 200, 200, .5);
-    width: 350px;
+    width: 300px;
     height: 70px;
     margin: 0 auto;
     position: relative;
@@ -78,7 +78,7 @@
 .controlGroup button {
     margin-top: 20px;
     display: block;
-    width: 100%;
+    width: 105%;
     line-height: 2em;
     background: rgba(114, 212, 202, 1);
     border-radius: 5px;

@@ -22,6 +22,8 @@ const SignUp = () => {
     const handleSignUp = (e) => {
         e.preventDefault();
         dispatch(authSignUp({ login, password }))
+        setLogin('')
+        setPassword('')
     }
 
     return (

@@ -30,6 +30,8 @@ const Discussions = () => {
 
     const handleAdd = () => {
         dispatch(addTheme({ name, text, userId, avatar }))
+        setName('')
+        setText('')
     }
 
     const sendFile = useCallback(async (e) => {
@@ -58,11 +60,11 @@ const Discussions = () => {
                         <input className={styles.inputDisc} placeholder='Тема' value={name} onChange={handleName} />
                         <input className={styles.inputDisc} placeholder='Текст' value={text} onChange={handleText} />
                         <div className={styles.mainPhoto}>
-                        <input type='file' onChange={e => setImage(e.target.files[0])} className={styles.inputPhoto}/>
-                        <button className={styles.fileButton} onClick={sendFile}>Добавить фото</button>
-                        </div> 
+                            <input type='file' onChange={e => setImage(e.target.files[0])} className={styles.inputPhoto} />
+                            <button className={styles.fileButton} onClick={sendFile}>Добавить фото</button>
+                        </div>
                     </div>
-                    <button className={styles.buttonDisc} onClick={handleAdd}>Добавить</button>
+                    <button className={styles.buttonDisc} onClick={handleAdd} disabled={!name || !text}>Добавить</button>
                 </div>
             </div>
             <ThemeMap />
