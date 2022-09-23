@@ -60,7 +60,6 @@ const ThemeOne = () => {
   };
 
   return (
-
     <>
     <Header2/>
     <div className={styles.w}>
@@ -74,7 +73,7 @@ const ThemeOne = () => {
             </div>
             <div className={styles.blocks}>
               <img
-                src="https://gamerwall.pro/uploads/posts/2022-02/1645706299_28-gamerwall-pro-p-volshebnik-gendalf-krasivie-oboi-40.jpg"
+                src={`http://localhost:3400/images/${elem.image}`}
                 alt="q"
               />
             </div>
