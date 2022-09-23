@@ -26,7 +26,8 @@ export const addComment = createAsyncThunk(
             const res = await fetch('http://localhost:3400/comment', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${thunkAPI.getState().applicationSlice.token}`
                 },
                 body: JSON.stringify({ text: comm, theme: id, user: userId })
             })
@@ -84,6 +85,25 @@ export const delLike = createAsyncThunk(
     }
 )
 
+export const delComment = createAsyncThunk(
+    'delete/comment',
+    async (item, thunkAPI) => {
+        try {
+            const res = await fetch(`http://localhost:3400/delComment/${item._id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${thunkAPI.getState().applicationSlice.token}`
+                }
+            })
+
+            return item;
+        } catch (e) {
+            thunkAPI.rejectWithValue(e)
+        }
+    }
+)
+
 const commentSlice = createSlice({
     name: 'commentSlice',
     initialState,
@@ -111,6 +131,9 @@ const commentSlice = createSlice({
                     }
                     return elem
                 })
+            })
+            .addCase(delComment.fulfilled, (state, action) => {
+                state.comments = state.comments.filter((elem) => elem._id !== action.payload._id)
             })
     }
 })

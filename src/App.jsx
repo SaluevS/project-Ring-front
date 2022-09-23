@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import Discussions from './components/Discussions/Discussions';
 import ThemeOne from './components/ThemeOne/ThemeOne';
 import Home from './components/Home/Home';
+import Header from './components/Header/Header';
 
 
 const App = () => {
