@@ -7,12 +7,14 @@ import ThemeOne from './components/ThemeOne/ThemeOne';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Maps from './components/Maps/Maps';
+import Card from './components/Card/Card';
 
 
 const App = () => {
   return (
     <>
     <Routes>
+      <Route path='/shop' element={<Card />} />
       <Route path='/cart' element={<Maps />} />
       <Route path='/' element={<Home />} />
       <Route path='/auth' element={<SignUp />} />
