@@ -1,7 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    comments: []
+    comments: [],
+    loadComment: false
 }
 
 export const fetchComments = createAsyncThunk(
@@ -115,6 +116,10 @@ const commentSlice = createSlice({
             })
             .addCase(addComment.fulfilled, (state, action) => {
                 state.comments.push(action.payload)
+                state.loadComment = false
+            })
+            .addCase(addComment.pending, (state, action) => {
+                state.loadComment = true
             })
             .addCase(addLike.fulfilled, (state, action) => {
                 state.comments = state.comments.map((item) => {

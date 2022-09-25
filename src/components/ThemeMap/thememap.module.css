@@ -4,3 +4,10 @@
     align-items: center;
     flex-flow: row wrap;
 }
+
+.tri {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
