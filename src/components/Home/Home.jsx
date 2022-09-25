@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import styles from "../Home/Home.module.css";
-import LOTR from "../Home/video/LOTR.mp4";
+import LOTR_1 from "../Home/video/LOTR_1.mp4";
 
 const Home = () => {
   return (
     <>
       <div className={styles.Home}>
         <video autoPlay muted loop>
-          <source src={LOTR} type="video/mp4" />
+          <source src={LOTR_1} type="video/mp4" />
         </video>
       </div>
       <div className={styles.all_footer}>
