@@ -49,7 +49,8 @@ export const addLike = createAsyncThunk(
             const res = await fetch(`http://localhost:3400/likeAdd/${commId}`, {
                 method: 'PATCH',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${thunkAPI.getState().applicationSlice.token}`
                 },
                 body: JSON.stringify({ like: userId })
             })
@@ -71,7 +72,8 @@ export const delLike = createAsyncThunk(
             const res = await fetch(`http://localhost:3400/likeDel/${commId}`, {
                 method: 'PATCH',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${thunkAPI.getState().applicationSlice.token}`
                 },
                 body: JSON.stringify({ like: userId })
             })
