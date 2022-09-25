@@ -27,7 +27,8 @@ export const addTheme = createAsyncThunk(
             const res = await fetch('http://localhost:3400/theme', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': "application/json"
+                    'Content-Type': "application/json",
+                    Authorization: `Bearer ${thunkAPI.getState().applicationSlice.token}`
                 },
                 body: JSON.stringify({ name: name, text: text, user: userId, image: avatar })
             })
