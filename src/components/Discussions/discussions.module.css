@@ -1,50 +1,90 @@
+.blocks {
+  background-image: url("https://oboi-download.ru/files/wallpapers/749/20491.jpg");
+  height: 150vh;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
 .main {
-    display: flex;
-    background-color: whitesmoke;
-    height: 200px;
+  display: flex;
+  height: 200px;
+  margin-top: 75px;
 }
 
 .inputButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    margin: auto;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  margin: auto;
+  cursor: pointer;
 }
 
 .inputDisc {
-    border: 1px solid silver;
-    width: 95%;
-    margin-right: 1%;
-    margin-bottom: 1.5%;
+  border: 1px solid silver;
+  width: 95%;
+  padding: 3px 10px;
+  font-size: 22px;
+  color: gray;
+  margin-right: 1%;
+  margin-bottom: 1.5%;
+  outline-color: rgb(43, 23, 174);
 }
 
 .buttonDisc {
-    width: 30%;
-    background-color: rgba(14, 14, 209, 0.805);
-    border: none;
-    font-size: 20px;
-    height: 55px;
-    margin-top: 0px;
-    cursor: pointer;
+  width: 30%;
+  color: white;
+  background-color: grey;
+  border: none;
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-size: 20px;
+  height: 55px;
+  margin-top: 0px;
+  cursor: pointer;
 }
 
 .buttonDisc:hover {
-    transform: scale(1.05);
-    background-color: rgba(0, 0, 255, 0.777);
+  transform: scale(1.05);
+  background-color: rgb(55, 55, 55);
 }
 
 .inputDisc::placeholder {
-    font-size: 15px;
-    opacity: 0.5;
-    font-family: cursive;
+  font-size: 15px;
+  opacity: 0.5;
+  font-family: cursive;
 }
 
 .image1 {
-    width: 50px;
+  width: 50px;
 }
 
 .mainPhoto {
-    display: flex;
+  display: flex;
+  margin-top: 20px;
+}
+
+.inputPhoto {
+  color: red;
+}
+
+.mainPhoto button {
+  color: red;
+}
+
+.one {
+  height: 530px;
+  background-image: url("https://demos.qreativethemes.com/thelandscaper/wp-content/uploads/sites/2/2015/09/leafs_white.png");
+  overflow: hidden;
+}
+
+.two{
+  cursor: grab;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
 }
