@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../Theme/theme.module.css";
+import PropTypes from 'prop-types'
 
 const Theme = ({ themes }) => {
   return (
@@ -17,5 +18,12 @@ const Theme = ({ themes }) => {
     </div>
   );
 };
+
+Theme.propTypes = {
+  themes: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired
+  }).isRequired
+}
 
 export default Theme;
