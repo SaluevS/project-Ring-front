@@ -17,6 +17,9 @@ const Home = () => {
         <div className={styles.footer_WB}>
           <img src="" alt="" />
         </div>
+        <div className={styles.footer_NL}>
+          <img src="" alt="" />
+        </div>
       </div>
     </>
   );
