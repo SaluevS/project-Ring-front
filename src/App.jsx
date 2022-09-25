@@ -8,7 +8,7 @@ import Home from './components/Home/Home';
 import Maps from './components/Maps/Maps';
 import Card from './components/Card/Card';
 import { useSelector } from 'react-redux';
-
+import Header from './components/Header/Header';
 
 const App = () => {
   const token = useSelector((state) => state.applicationSlice.token)
@@ -16,6 +16,7 @@ const App = () => {
   if (token) {
     return (
       <>
+        <Header />
         <Routes>
           <Route path='/shop' element={<Card />} />
           <Route path='/cart' element={<Maps />} />
@@ -25,12 +26,14 @@ const App = () => {
           <Route path='/discussions' element={<Discussions />} />
           <Route path='/discussions/:id' element={<ThemeOne />} />
         </Routes>
+        
       </>
     );
   }
 
   return (
     <>
+      <Header />
       <Routes>
         <Route path='/shop' element={<Card />} />
         <Route path='/cart' element={<Maps />} />

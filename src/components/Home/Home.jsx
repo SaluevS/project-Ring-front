@@ -1,27 +1,28 @@
 import { Link } from "react-router-dom";
 import styles from "../Home/Home.module.css";
-import vid from "../Home/video/2323.mp4";
-import Header from "../Header/Header"
+// import LOTR from "../Home/video/LOTR.mp4";
 
 const Home = () => {
   return (
     <>
-    <Header/>
-    <div className={styles.Home}>
-      <video autoPlay muted loop>
-        <source src={vid} type="video/mp4" />
-      </video>
-      <div className={styles.main}>
-        <Link to="/discussions" className={styles.ll}>
-          <button> Перейте к Форуму </button>
-        </Link>
-        <Link to="/cart" className={styles.ll}>
-          <button> Открыть карту </button>
-        </Link>
+      <div className={styles.Home}>
+        <video autoPlay muted loop>
+          {/* <source src={LOTR} type="video/mp4" /> */}
+        </video>
       </div>
-    </div>
+      <div className={styles.all_footer}>
+        <div className={styles.footer_text}>
+          <p>© Футер чуть позже добью</p>
+        </div>
+        <div className={styles.footer_WB}>
+          <img src="" alt="" />
+        </div>
+        <div className={styles.footer_NL}>
+          <img src="" alt="" />
+        </div>
+      </div>
     </>
   );
-};
+}
 
 export default Home;
