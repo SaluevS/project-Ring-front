@@ -1,7 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    themes: []
+    themes: [],
+    loading: false
 }
 
 export const fetchThemes = createAsyncThunk(
@@ -48,6 +49,10 @@ const themeSlice = createSlice({
         builder
             .addCase(fetchThemes.fulfilled, (state, action) => {
                 state.themes = action.payload
+                state.loading = false
+            })
+            .addCase(fetchThemes.pending, (state, action) => {
+                state.loading = true
             })
             .addCase(addTheme.fulfilled, (state, action) => {
                 state.themes.push(action.payload)

@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 import { fetchThemes } from "../../features/themeSlice";
 import Theme from "../Theme/Theme";
 import styles from "../ThemeMap/thememap.module.css";
+import { Dna } from "react-loader-spinner";
 
 const ThemeMap = () => {
   const theme = useSelector((state) => state.themeSlice.themes);
+  const loading = useSelector((state) => state.themeSlice.loading)
 
   const dispatch = useDispatch();
 
@@ -15,21 +17,34 @@ const ThemeMap = () => {
     dispatch(fetchThemes());
   }, [dispatch]);
 
-  return (
-    <div className={styles.themeMap}>
-      {theme
-        .map((elem) => {
-          return (
-            <div>
-              <Link to={elem._id}>
-                <Theme themes={elem} />
-              </Link>
-            </div>
-          );
-        })
-        .reverse()}
-    </div>
-  );
+  if (loading) {
+    return <div className={styles.tri}>
+      <Dna
+        visible={true}
+        height="150"
+        width="200"
+        ariaLabel="dna-loading"
+        wrapperStyle={{}}
+        wrapperClass="dna-wrapper"
+      />
+      </div>
+  }
+
+      return (
+      <div className={styles.themeMap}>
+        {theme
+          .map((elem) => {
+            return (
+              <div>
+                <Link to={elem._id}>
+                  <Theme themes={elem} />
+                </Link>
+              </div>
+            );
+          })
+          .reverse()}
+      </div>
+      );
 };
 
-export default ThemeMap;
+      export default ThemeMap;

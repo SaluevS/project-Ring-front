@@ -1,12 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { authSignIn } from '../../features/applicationSlice';
-import styles from '../Auth/auth.module.css'
+import styles from '../Auth/auth.module.css';
+import { Dna } from 'react-loader-spinner';
 
 const SignIn = () => {
     const [login, setLogin] = useState('')
-    const [password, setPassword] = useState()
+    const [password, setPassword] = useState();
+    const signingIn = useSelector((state) => state.applicationSlice.signingIn)
    
     const dispatch = useDispatch();
 
@@ -24,6 +26,19 @@ const SignIn = () => {
         setLogin('')
         setPassword('')
     }
+
+    if (signingIn) {
+        return <div className={styles.tri}>
+          <Dna
+            visible={true}
+            height="150"
+            width="200"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper"
+          />
+          </div>
+      }
 
     return (
         <div className={styles.login}>

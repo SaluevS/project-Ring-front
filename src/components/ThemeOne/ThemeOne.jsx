@@ -13,6 +13,7 @@ import {
 import styles from "../ThemeOne/themeOne.module.css";
 import { useState } from "react";
 import Header2 from "../Header2/Header2";
+import { Dna } from "react-loader-spinner";
 
 const ThemeOne = () => {
     const [comm, setComm] = useState("");
@@ -21,6 +22,7 @@ const ThemeOne = () => {
     const themes = useSelector((state) => state.themeSlice.themes);
     const comments = useSelector((state) => state.commentSlice.comments);
     const userId = useSelector((state) => state.applicationSlice.login1);
+    const loading = useSelector((state) => state.themeSlice.loading);
     const dispatch = useDispatch();
 
     const filteredThemes = themes.filter((elem) => {
@@ -47,6 +49,7 @@ const ThemeOne = () => {
 
     const handleAddComment = () => {
         dispatch(addComment({ comm, id, userId }));
+        setComm('')
     };
 
     const handleDelComment = (item) => {
@@ -64,6 +67,19 @@ const ThemeOne = () => {
             setLike(true);
         }
     };
+
+    if (loading) {
+        return <div className={styles.tri}>
+          <Dna
+            visible={true}
+            height="150"
+            width="200"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper"
+          />
+          </div>
+      }
 
     return (
 

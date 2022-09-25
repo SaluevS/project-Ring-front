@@ -109,3 +109,9 @@
     text-decoration: none;
     color: rgb(78, 78, 232);
 }
+
+.tri {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
