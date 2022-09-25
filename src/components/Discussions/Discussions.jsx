@@ -6,7 +6,6 @@ import { addTheme, fetchThemes } from '../../features/themeSlice';
 import styles from '../Discussions/discussions.module.css'
 import ThemeMap from '../ThemeMap/ThemeMap';
 import axios from 'axios';
-import { Triangle } from 'react-loader-spinner'
 
 const Discussions = () => {
     const [img, setImage] = useState()
@@ -14,7 +13,6 @@ const Discussions = () => {
     const [name, setName] = useState('')
     const [text, setText] = useState('')
     const userId = useSelector((state) => state.applicationSlice.login1)
-    const loading = useSelector((state) => state.themeSlice.loading)
 
     const dispatch = useDispatch()
 

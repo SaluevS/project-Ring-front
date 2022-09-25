@@ -70,16 +70,16 @@ const ThemeOne = () => {
 
     if (loading) {
         return <div className={styles.tri}>
-          <Dna
-            visible={true}
-            height="150"
-            width="200"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper"
-          />
-          </div>
-      }
+            <Dna
+                visible={true}
+                height="150"
+                width="200"
+                ariaLabel="dna-loading"
+                wrapperStyle={{}}
+                wrapperClass="dna-wrapper"
+            />
+        </div>
+    }
 
     return (
 
@@ -96,7 +96,7 @@ const ThemeOne = () => {
                                 </div>
                                 <div className={styles.blocks}>
                                     <img
-                                        src="https://gamerwall.pro/uploads/posts/2022-02/1645706299_28-gamerwall-pro-p-volshebnik-gendalf-krasivie-oboi-40.jpg"
+                                        src={`http://localhost:3400/images/${elem.image}`}
                                         alt="q"
                                     />
                                 </div>
