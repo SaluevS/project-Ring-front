@@ -27,24 +27,24 @@ const ThemeMap = () => {
         wrapperStyle={{}}
         wrapperClass="dna-wrapper"
       />
-      </div>
+    </div>
   }
 
-      return (
-      <div className={styles.themeMap}>
-        {theme
-          .map((elem) => {
-            return (
-              <div>
-                <Link to={elem._id}>
-                  <Theme themes={elem} />
-                </Link>
-              </div>
-            );
-          })
-          .reverse()}
-      </div>
-      );
+  return (
+    <div className={styles.themeMap}>
+      {theme
+        .map((elem) => {
+          return (
+            <div>
+              <Link to={elem._id}>
+                <Theme themes={elem} />
+              </Link>
+            </div>
+          );
+        })
+        .reverse()}
+    </div>
+  );
 };
 
-      export default ThemeMap;
+export default ThemeMap;
