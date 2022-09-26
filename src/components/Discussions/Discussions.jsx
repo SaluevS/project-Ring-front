@@ -66,7 +66,6 @@ const Discussions = () => {
 
   return (
     <div className={styles.blocks}>
-      <Header2 />
       <div className={styles.main}>
         <div className={styles.inputButton}>
           <div className={styles.inputs}>
