@@ -10,9 +10,9 @@ const Home = () => {
           <source src={LOTR_1} type="video/mp4" />
         </video>
       </div>
-      {/* <div className={styles.all_footer}>
+      <div className={styles.all_footer}>
         <div className={styles.footer_text}>
-          <p>© Футер чуть позже добью</p>
+          {/* <p>© Футер чуть позже добью</p> */}
         </div>
         <div className={styles.footer_WB}>
           <img src="" alt="" />
@@ -20,7 +20,7 @@ const Home = () => {
         <div className={styles.footer_NL}>
           <img src="" alt="" />
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
