@@ -36,7 +36,7 @@ const ThemeMap = () => {
           .map((elem) => {
             return (
               <div className={styles.themeMapCard}>
-                <Link to={elem._id}>
+                <Link to={elem._id} className={styles.li}>
                   <Theme themes={elem} />
                 </Link>
               </div>
