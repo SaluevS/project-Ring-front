@@ -2,7 +2,7 @@
 
 .Maps_page {
   width: 100%;
-  background-color: #66330d;
+  background-color: brown;
   color: white;
   padding: 10px 0 50px 0;
 }
@@ -11,7 +11,7 @@
   font-size: 25px;
   text-align: center;
   font-weight: bold;
-  background-color: #66330d;
+  background-color: brown;
 }
 
 .Maps {
@@ -21,7 +21,7 @@
   margin-top: 15px;
   width: 97%;
   height: 690px;
-  outline: 5px solid rgba(165, 42, 42, 0.51);
+  outline: 5px solid rgba(0, 0, 0, 0.21);
 }
 
 /* 
@@ -63,7 +63,7 @@
 .Rohan_card {
   position: absolute;
   left: 740px;
-  bottom: 290px;
+  bottom: 210px;
   border-radius: 23%;
   background-color: rgb(34, 192, 34);
 }
@@ -71,7 +71,7 @@
 .Gondor_card {
   position: absolute;
   left: 810px;
-  bottom: 130px;
+  bottom: 50px;
   border-radius: 23%;
   background-color: rgb(84, 84, 224);
 }
@@ -79,7 +79,7 @@
 .Mordor_card {
   position: absolute;
   left: 1150px;
-  bottom: 160px;
+  bottom: 80px;
   border-radius: 23%;
   background-color: brown;
 }
@@ -211,7 +211,7 @@
   height: 95px;
   position: absolute;
   left: 635px;
-  bottom: 250px;
+  bottom: 170px;
   border-radius: 23%;
   background-color: rgb(34, 192, 34);
   border-radius: 50%;
@@ -223,7 +223,7 @@
   height: 95px;
   position: absolute;
   left: 870px;
-  bottom: 130px;
+  bottom: 50px;
   transition: 7s;
   border-radius: 23%;
   background-color: rgb(34, 192, 34);
@@ -236,7 +236,7 @@
   height: 95px;
   position: absolute;
   left: 1040px;
-  bottom: 120px;
+  bottom: 40px;
   border-radius: 23%;
   background-color: brown;
   border-radius: 50%;
@@ -248,7 +248,7 @@
   height: 95px;
   position: absolute;
   left: 935px;
-  bottom: 130px;
+  bottom: 50px;
   transition: 7s;
   border-radius: 23%;
   background-color: brown;
@@ -261,7 +261,7 @@
   height: 95px;
   position: absolute;
   left: 495px;
-  bottom: 500px;
+  bottom: 420px;
   border-radius: 23%;
   background-color: orange;
   border-radius: 50%;
@@ -272,7 +272,7 @@
   height: 95px;
   position: absolute;
   left: 1045px;
-  bottom: 200px;
+  bottom: 120px;
   transition: 7s;
   border-radius: 23%;
   background-color: orange;
@@ -370,7 +370,7 @@
 
 .dropbtn {
   min-width: 130px;
-  background-color: #66330d;
+  background-color: brown;
   font-weight: bold;
   color: white;
   padding: 25px 25px;
@@ -410,7 +410,7 @@
 
 .dropbtn_two {
   min-width: 130px;
-  background-color: #66330d;
+  background-color: brown;
   font-weight: bold;
   color: white;
   padding: 25px 25px;
@@ -456,7 +456,7 @@
   margin: auto;
   width: 40%;
   height: 100px;
-  border: 5px solid #a6581d99;
+  border: 5px solid rgba(0, 0, 0, 0.118);
 }
 
 .modal_card_img img {

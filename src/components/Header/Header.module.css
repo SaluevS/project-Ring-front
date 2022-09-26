@@ -3,15 +3,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: transparent;
+  background-color: rgb(105, 28, 28);
   margin-right: 0px;
 }
 
 .mainOfMain {
   display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column-reverse;
 }
 
 .Header img {
@@ -21,34 +20,32 @@
 
 .link {
   margin-top: 10px;
-  font-size: 35px;
+  font-size: 20px;
   color: gold;
-  font-family: "Pacifico", cursive;
+  /* font-family: "Pacifico", cursive; */
   text-decoration: none;
 }
 
 .link1 {
   margin-top: 10px;
-  font-size: 35px;
+  font-size: 20px;
   color: gold;
-  font-family: "Pacifico", cursive;
+  /* font-family: "Pacifico", cursive; */
   text-decoration: none;
   margin-right: 0px;
 }
 
 .mainEntry {
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 70px;
-  margin-top: 20px;
-  margin-right: 45px;
+  justify-content: end;
+  background-color: rgb(67, 18, 18);
+  font-size: 15px;
 }
 
 .entry {
   color: aliceblue;
   text-decoration: none;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 .exit {
@@ -58,17 +55,10 @@
 }
 
 .mainExit {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  width: 70px;
-  margin-top: 20px;
-  margin-right: 0px;
-}
-
-.exit:hover {
-  border-bottom: 2px solid white;
-}
-
-.entry:hover {
-  border-bottom: 2px solid white;
+  justify-content: end;
+  background-color: rgb(67, 18, 18);
+  font-size: 15px;
+  padding-right: 50px;
 }
