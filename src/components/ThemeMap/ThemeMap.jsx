@@ -27,7 +27,7 @@ const ThemeMap = () => {
         wrapperStyle={{}}
         wrapperClass="dna-wrapper"
       />
-      </div>
+    </div>
   }
 
       return (
@@ -47,4 +47,4 @@ const ThemeMap = () => {
       );
 };
 
-      export default ThemeMap;
+export default ThemeMap;

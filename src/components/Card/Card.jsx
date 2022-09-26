@@ -5,9 +5,11 @@ import CardOne from "./CardOne";
 import styles from "./Card.module.css";
 import { useState } from "react";
 import Basket from "./img/Basket.png";
+import { Dna } from "react-loader-spinner";
 
 const Card = () => {
   const cards = useSelector((state) => state.cardSlice.cards);
+  const loader = useSelector((state) => state.cardSlice.loader)
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -18,6 +20,19 @@ const Card = () => {
   const searchCards = cards.filter((card) => {
     return card.title.toLowerCase().includes(value.toLowerCase());
   });
+
+  if (loader) {
+    return <div className={styles.tri}>
+        <Dna
+            visible={true}
+            height="150"
+            width="200"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper"
+        />
+    </div>
+}
 
   return (
     <div className={styles.things}>

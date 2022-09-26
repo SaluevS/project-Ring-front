@@ -26,7 +26,6 @@ const App = () => {
           <Route path='/discussions' element={<Discussions />} />
           <Route path='/discussions/:id' element={<ThemeOne />} />
         </Routes>
-        
       </>
     );
   }
