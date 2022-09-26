@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTheme, fetchThemes } from "../../features/themeSlice";
 import styles from "../Discussions/discussions.module.css";
 import ThemeMap from "../ThemeMap/ThemeMap";
-import Header2 from "../Header2/Header2";
 import axios from "axios";
 import { motion } from "framer-motion";
 
@@ -16,11 +15,6 @@ const Discussions = () => {
   const userId = useSelector((state) => state.applicationSlice.login1);
 
   const carousel = useRef();
-  let [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  });
 
   const dispatch = useDispatch();
 
@@ -97,19 +91,15 @@ const Discussions = () => {
             onClick={handleAdd}
             disabled={!name || !text}
           >
-            Добавить
+            Опубликовать тему
           </button>
         </div>
       </div>
-      <motion.div ref={carousel} className={styles.one}>
-        <motion.div
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-          className={styles.two}
-        >
+      <div ref={carousel} className={styles.one}>
+        <div className={styles.two}>
           <ThemeMap />
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 };

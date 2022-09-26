@@ -1,5 +1,5 @@
 .blocks {
-  background-image: url("https://kartinkin.net/uploads/posts/2021-03/1616033996_12-p-fon-vlastelin-kolets-12.jpg");
+  background-image: url("");
   background-size: cover;
   height: 150vh;
   position: absolute;
@@ -11,16 +11,21 @@
 .main {
   display: flex;
   height: 200px;
-  margin-top: 75px;
+  margin-top: 140px;
+  margin-left: 20px;
 }
 
 .inputButton {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   width: 400px;
   margin: auto;
   cursor: pointer;
+}
+
+.inputButton button {
+  height: 40px;
+  width: 385px;
 }
 
 .inputDisc {
@@ -37,25 +42,23 @@
 .buttonDisc {
   width: 30%;
   color: white;
-  background-color: grey;
-  border: none;
+  background-color: brown;
+  border: 1px solid rgba(128, 128, 128, 0.558);
   border-radius: 10px;
   padding: 4px 10px;
-  font-size: 20px;
+  font-size: 16px;
   height: 55px;
   margin-top: 0px;
   cursor: pointer;
 }
 
-.buttonDisc:hover {
-  transform: scale(1.05);
-  background-color: rgb(55, 55, 55);
+.buttonDisc::after {
+  background-color: rgb(29, 29, 29);
 }
 
 .inputDisc::placeholder {
   font-size: 15px;
   opacity: 0.5;
-  font-family: cursive;
 }
 
 .image1 {
@@ -64,28 +67,28 @@
 
 .mainPhoto {
   display: flex;
-  margin-top: 20px;
+  flex-direction: column;
 }
 
 .inputPhoto {
   color: red;
+  margin: auto;
 }
 
 .mainPhoto button {
-  color: red;
+  color: white;
+  background-color: brown;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 5px 0;
+  border: 1px solid rgba(128, 128, 128, 0.558);
 }
 
 .one {
   height: 530px;
-  background-image: url("https://demos.qreativethemes.com/thelandscaper/wp-content/uploads/sites/2/2015/09/leafs_white.png");
-  overflow: hidden;
 }
 
 .two{
-  cursor: grab;
-  width: max-content;
   height: 100%;
-  display: flex;
-  justify-content: space-around;
   padding: 30px 0;
 }
