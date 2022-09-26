@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
 }
 
@@ -48,8 +48,8 @@
 }
 
 .all_footer {
-  margin-top: 576.5px;
+  margin-top: 595px;
   width: 100%;
-  height: 70px;
+  height: 60px;
   background-color: brown;
 }
