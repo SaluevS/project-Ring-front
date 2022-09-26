@@ -30,21 +30,21 @@ const ThemeMap = () => {
     </div>
   }
 
-  return (
-    <div className={styles.themeMap}>
-      {theme
-        .map((elem) => {
-          return (
-            <div>
-              <Link to={elem._id}>
-                <Theme themes={elem} />
-              </Link>
-            </div>
-          );
-        })
-        .reverse()}
-    </div>
-  );
+      return (
+      <div className={styles.themeMap}>
+        {theme
+          .map((elem) => {
+            return (
+              <div className={styles.themeMapCard}>
+                <Link to={elem._id}>
+                  <Theme themes={elem} />
+                </Link>
+              </div>
+            );
+          })
+          .reverse()}
+      </div>
+      );
 };
 
 export default ThemeMap;
