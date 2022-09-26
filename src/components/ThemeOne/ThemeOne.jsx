@@ -84,7 +84,6 @@ const ThemeOne = () => {
     return (
 
         <>
-            <Header2 />
             <div className={styles.w}>
                 <div className={styles.One}>
                     {filteredThemes.map((elem) => {
