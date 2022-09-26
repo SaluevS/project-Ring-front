@@ -6,7 +6,8 @@
 
 .w {
   width: 100%;
-  background-image: url("https://wallpaperaccess.com/full/803360.jpg");
+  background-image: url("https://kartinkin.net/uploads/posts/2021-03/1616033996_12-p-fon-vlastelin-kolets-12.jpg");
+  background-size: cover;
   object-fit: cover;
   position: absolute;
   z-index: -9;
@@ -120,8 +121,16 @@
 .delcomment {
   margin-left: 5px;
   cursor: pointer;
+  border: none;
+  padding: 5px;
+  background-color: unset;
+  color: red;
+  font-size: large;
 }
 
+.delcomment:hover {
+  transform: scale(1.10);
+}
 .tri {
   display: flex;
   justify-content: center;
